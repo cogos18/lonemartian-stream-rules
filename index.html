@@ -2,150 +2,85 @@
 
 <html>
     <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=link" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <title>Stream Rules - LoneMartian</title>
+        <link rel="stylesheet" href="https://unpkg.com/7.css">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body onload="whenLoad();">
-        <noscript>
-            <p>Please enable JavaScript before accessing this page.</p>
-        </noscript>
-        <div id="root">
-            <div id="header">
-                <h1>LoneMartian - Stream Rules</h1>
-                <p>Before participating in the chat, please make yourself familiar with the rules listed here, for the best experience.</p>
-            </div>
-            <div id="body">
-                <ol class="rules_list">
-                    <li id="youtube_tos" class="rules_item">
-                        <p>
-                            <a href="#youtube_tos">
-                                <span class="material-symbols-outlined">
-                                    link
-                                </span>
-                            </a>
-                            <b>Follow YouTube's Community Guidelines</b>
-                        </p>
-                        <div class="rule_summary">
-                            <p>To view the guidelines, please see <a href="https://support.google.com/youtube/answer/9288567">https://support.google.com/youtube/answer/9288567</a>.</p>
-                        </div>
-                    </li>
-                    <li id="english_only" class="rules_item">
-                        <p>
-                            <a href="#english_onlys">
-                                <span class="material-symbols-outlined">
-                                    link
-                                </span>
-                            </a>
-                            <b>Keep all discussions in English</b>
-                        </p>
-                        <div class="rule_summary">
-                            <p>The reason for this is to make moderation easier. Try to speak English to the best of your ability or use an online translator.</p>
-                        </div>
-                    </li>
-                    <li id="sensitive_content" class="rules_item">
-                        <p>
-                            <a href="#sensitive_content">
-                                <span class="material-symbols-outlined">
-                                    link
-                                </span>
-                            </a>
-                            <b>Refrain from discussing sensitive topics</b>
-                        </p>
-                        <div class="rule_summary">
-                            <p>Don't be an idiot and use common sense.</p>
-                            <p>This means avoid talking about sensitive topics, such as politics, religion, and anything else that would cause arguments and make the chat unwelcoming overall.</p>
-                        </div>
-                    </li>
-                    <li id="respect" class="rules_item">
-                        <p>
-                            <a href="#respect">
-                                <span class="material-symbols-outlined">
-                                    link
-                                </span>
-                            </a>
-                            <b>Treat others with respect</b>
-                        </p>
-                        <div class="rule_summary">
-                            <p>
-                                Don't start fights with one another and treat others how you'd expect them to treat you back.
-                            </p>
-                            <p><b>Any form of hate speech will NOT be tolerated.</b></p>
-                        </div>
-                    </li>
-                    <li id="redirecting" class="rules_item">
-                        <p>
-                            <a href="#redirecting">
-                                <span class="material-symbols-outlined">
-                                    link
-                                </span>
-                            </a>
-                            <b>No redirecting to other sites</b>
-                        </p>
-                        <div class="rule_summary">
-                            <p>
-                                If a content creator either uploads a video or starts livestreaming on other websites (including YouTube), then please be polite and do not announce it in the chat.
-                            </p>
-                            <p>Also, no promoting things like social media profiles, websites, discussion boards (like Reddit), or chatrooms (For example, Discord).</p>
-                        </div>
-                    </li>
-                    <li id="nsfw" class="rules_item">
-                        <p>
-                            <a href="#nsfw">
-                                <span class="material-symbols-outlined">
-                                    link
-                                </span>
-                            </a>
-                            <b>No NSFW</b>
-                        </p>
-                        <div class="rule_summary">
-                            <p>Do not link gore, pornography or other graphic material in the chat. Keep it to yourself.<br>
-                                This also means no posting sex toys or anything similar.
-                            </p>
-                        </div>
-                    </li>
-                    <li id="spoilers" class="rules_item">
-                        <p>
-                            <a href="#spoilers">
-                                <span class="material-symbols-outlined">
-                                    link
-                                </span>
-                            </a>
-                            <b>No spoilers or backseating</b>
-                        </p>
-                        <div class="rule_summary">
-                            <p>When I ask to not post spoilers, please respect that, otherwise you'll ruin it for me and others watching the stream.
-                            </p>
-                        </div>
-                    </li>
-                    <li id="spam" class="rules_item">
-                        <p>
-                            <a href="#spam">
-                                <span class="material-symbols-outlined">
-                                    link
-                                </span>
-                            </a>
-                            <b>Don't spam and be a general nuisance.</b>
-                        </p>
-                        <div class="rule_summary">
-                            <p>ASCII art or copypastas will not be tolerated and will result in a mute.</p>
-                            <p>Also don't post long multi-emote chains either.</p>
-                        </div>
-                    </li>
-                </ol>
-            </div>
-            <div id="footer">
-                <p class="subject_to_change"><b>Please be aware that these rules are subject to change at anytime.</b></p>
-                <div id="google_translate_element">
-                    Translate into other languages<br>
-                    <div id="google_translate"></div>
+    <body>
+        <div id="root" class="window glass active" style="display: flexbox; margin: 32px;">
+            <div id="header" class="title-bar">
+                <div class="title-bar-text">LoneMartian - Stream Rules</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Help"></button>
+                    <button aria-label="Close" disabled></button>
                 </div>
             </div>
+            <div id="body" class="window-body has-space" style="height: 100%;">
+                <div id="subtitle">
+                    <p>Please make yourself familiar with the rules before participating. Thank you.</p>
+                </div>
+                <div style="height: 65vh; overflow: auto;">
+                    <ul class="tree-view has-collapse-button has-container has-connector">
+                    <li>
+                        <h2>1. Follow YouTube's Community Guidelines</h2>
+                        
+                        <p>Please see <a href="https://support.google.com/youtube/answer/9288567">https://support.google.com/youtube/answer/9288567</a> for more information.</p>
+                    </li>
+                    <li>
+                        <details>
+                            <summary><h2>2. Keep conversations in English.</h2></summary>
+                            <p>This helps with making moderation easier and allowing the streamer to read chat messages.</p>
+                            <p>So try to speak English as best as you can or use an online translator.</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary><h2>3. No NSFW.</h2></summary>
+                            <p>No discussing or linking gore, pornography and any explicit material in chat. Keep that to yourself.</p>
+                            <p>This also means no posting or linking to s*x toys or anything of that nature.</p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                        <summary><h2>4. No sensitive topics.</h2></summary>
+                        <p>Don't be a douchebag and use common sense.</p>
+                        <p>This also means no discussing topics that may cause trolling and hostility, such as mental health, politics, religion, etc.</p>
+                        </details>
+                    </li>
+                    <li>
+                        <h2>5. Be respectful.</h2>
+                        <p>Pretty self-explanatory. Be chill and don't start fights in chat.</p>
+                    </li>
+                    <li>
+                        <details>
+                        <summary><h2>6. No linking to other content creators, websites, etc.</h2></summary>
+                        <p>If another content creator posts something or starts livestreaming, then please be polite and do not announce it in the chat.</p>
+                        <p>Don't post links or invites to social media profiles (including YouTube channels), chatrooms (such as Discord), websites, etc.</p>
+                        </details>
+                    </li>
+                    <li>
+                        <h2>7. No posting spoilers in chat.</h2>
+                        <p>Pretty self-explanatory. Don't post spoilers from any media in the chat, otherwise you'll ruin it for me and the people watching the stream.</p>
+                    </li>
+                    <li>
+                        <details>
+                        <summary><h2>8. No spamming.</h2></summary>
+                        <p>ASCII art and copypastas are NOT tolerated.</p>
+                        <p>No spamming the same phrase over and over in chat.</p>
+                        <p>Refrain from posting long multi-emote strings.</p>
+                        </details>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <div id="footer" class="status-bar">
+                <div id="copyright" class="status-bar-field">
+                    Copyright &copy; 2025-present LoneMartian. Hosted via GitHub pages.
+                </div>
+                <div id="theme_credit" class="status-bar-field">This website uses <a href="https://khang-nd.github.io/7.css">7.css</a> as the main theme.</div>
+            </div>
         </div>
-         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script> 
-         <script type="text/javascript" src="scripts/index.js">
-         </script>
     </body>
 </html>
